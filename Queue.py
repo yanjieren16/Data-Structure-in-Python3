@@ -1,6 +1,20 @@
 # implementation of Queue
 
+# implementation of Queue using list
+class Queue:
 
+    def __init__(self):
+        self.queue = []
+
+    def enqueue(self, val):
+        self.queue.insert(0, val)
+
+    def dequeue(self):
+        self.queue.pop()
+
+    def get_size(self):
+        return len(self.queue)
+    
 # implementation of linked Queue
 class Node:
     def __init__(self, cargo=None, next=None):
@@ -11,7 +25,7 @@ class Node:
         return str(self.cargo)
 
 
-class Queue:
+class Queue_LL:
 
     def __init__(self):
         self.length = 0
